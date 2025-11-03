@@ -35,6 +35,37 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-white);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   INTERACTIVE BACKGROUND
+   ========================================== */
+
+#interactive-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Ensure all content is above the background */
+.navbar,
+main,
+section,
+footer,
+.hero,
+.about,
+.specializations,
+.work,
+.publications,
+.contact-section {
+    position: relative;
+    z-index: 1;
 }
 
 .container {
