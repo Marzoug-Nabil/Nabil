@@ -1092,46 +1092,163 @@ section {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Chatbot Button */
+/* Chatbot Button - Fancy Design */
 .chatbot-button {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-2);
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: var(--shadow-xl);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6),
+                0 0 0 0 rgba(102, 126, 234, 0.7);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
+    animation: float 3s ease-in-out infinite, pulse-ring 2s infinite;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-ring {
+    0% {
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6),
+                    0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    50% {
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6),
+                    0 0 0 15px rgba(102, 126, 234, 0);
+    }
+    100% {
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6),
+                    0 0 0 0 rgba(102, 126, 234, 0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 10px rgba(102, 126, 234, 0.8));
+    }
+    50% {
+        filter: brightness(1.2) drop-shadow(0 0 20px rgba(102, 126, 234, 1));
+    }
+}
+
+.chatbot-button::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+    filter: blur(15px);
+    opacity: 0.7;
+    z-index: -1;
+    animation: rotate-gradient 3s linear infinite;
+}
+
+@keyframes rotate-gradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .chatbot-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.8),
+                0 0 0 0 rgba(102, 126, 234, 0.7);
+    animation: float 3s ease-in-out infinite, glow 1.5s ease-in-out infinite;
 }
 
 .chatbot-button i {
-    font-size: 28px;
+    font-size: 32px;
     color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    animation: spin-slow 10s linear infinite;
+}
+
+@keyframes spin-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.chatbot-button:hover i {
+    animation: bounce-icon 0.6s ease infinite;
+}
+
+@keyframes bounce-icon {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
 }
 
 .chatbot-button.open {
-    transform: scale(0.9);
+    transform: scale(0.95);
+    animation: none;
 }
 
 .chatbot-badge {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    background: var(--success-color);
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 2px 6px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.6);
+    border: 2px solid white;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Sparkle effect */
+.chatbot-button::after {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    font-size: 20px;
+    animation: sparkle 3s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(5px, -5px) scale(1);
+    }
 }
 
 /* Chatbot Window */
@@ -1483,22 +1600,27 @@ section {
     }
 
     .chatbot-button {
-        width: 55px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
     }
 
     .chatbot-button i {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .chatbot-window {
         width: calc(100vw - 30px);
         max-height: 500px;
-        bottom: 75px;
+        bottom: 85px;
     }
 
     .message-content {
         max-width: 85%;
         font-size: 13px;
+    }
+
+    .chatbot-badge {
+        font-size: 10px;
+        padding: 3px 6px;
     }
 }
