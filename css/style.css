@@ -79,12 +79,15 @@ footer,
    ========================================== */
 
 .navbar {
-    background-color: var(--bg-white);
-    box-shadow: var(--shadow-md);
+    background-color: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar .container {
@@ -95,7 +98,7 @@ footer,
 }
 
 .nav-brand h2 {
-    color: var(--primary-color);
+    color: white;
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -107,7 +110,7 @@ footer,
 }
 
 .nav-menu a {
-    color: var(--text-dark);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -121,7 +124,7 @@ footer,
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: #00d4ff;
     transition: width 0.3s ease;
 }
 
@@ -132,7 +135,7 @@ footer,
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: var(--primary-color);
+    color: #00d4ff;
 }
 
 .hamburger {
@@ -145,7 +148,7 @@ footer,
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: var(--text-dark);
+    background-color: white;
     transition: all 0.3s ease;
 }
 
@@ -301,13 +304,15 @@ section {
 }
 
 .spec-card {
-    background: var(--bg-white);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .spec-card:hover {
@@ -317,17 +322,17 @@ section {
 
 .spec-icon {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: #00d4ff;
     margin-bottom: 1rem;
 }
 
 .spec-card h3 {
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: white;
 }
 
 .spec-card p {
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* ==========================================
@@ -345,11 +350,14 @@ section {
 }
 
 .work-card {
-    background: var(--bg-white);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .work-card:hover {
@@ -366,15 +374,15 @@ section {
 
 .work-header i {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #00d4ff;
 }
 
 .work-header h3 {
-    color: var(--text-dark);
+    color: white;
 }
 
 .work-card p {
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1.5rem;
 }
 
@@ -397,7 +405,7 @@ section {
 }
 
 .work-link {
-    color: var(--primary-color);
+    color: #00d4ff;
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
@@ -408,6 +416,7 @@ section {
 
 .work-link:hover {
     gap: 1rem;
+    color: #7b2ff7;
 }
 
 /* ==========================================
@@ -1025,10 +1034,13 @@ section {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--bg-white);
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         flex-direction: column;
         padding: 1rem 0;
-        box-shadow: var(--shadow-md);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         display: none;
     }
 
