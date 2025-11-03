@@ -34,7 +34,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--bg-white);
+    background: transparent;
     position: relative;
     overflow-x: hidden;
 }
@@ -155,7 +155,7 @@ footer,
 
 .hero {
     padding: 80px 0;
-    background: var(--gradient-2);
+    background: transparent;
     color: white;
 }
 
@@ -265,7 +265,7 @@ section {
 }
 
 .about {
-    background-color: var(--bg-light);
+    background-color: transparent;
 }
 
 .about-content {
@@ -285,7 +285,7 @@ section {
    ========================================== */
 
 .specializations {
-    background-color: var(--bg-white);
+    background-color: transparent;
 }
 
 .spec-grid {
@@ -329,7 +329,7 @@ section {
    ========================================== */
 
 .featured-work {
-    background-color: var(--bg-light);
+    background-color: transparent;
 }
 
 .work-grid {
@@ -409,7 +409,7 @@ section {
    ========================================== */
 
 .publications {
-    background-color: var(--bg-white);
+    background-color: transparent;
 }
 
 .pub-grid {
@@ -458,7 +458,7 @@ section {
    ========================================== */
 
 .page-header {
-    background: var(--gradient-2);
+    background: transparent;
     color: white;
     padding: 80px 0 60px;
     text-align: center;
@@ -479,7 +479,7 @@ section {
    ========================================== */
 
 .experience-section {
-    background-color: var(--bg-light);
+    background-color: transparent;
 }
 
 .timeline {
@@ -641,7 +641,7 @@ section {
    ========================================== */
 
 .skills-section {
-    background-color: var(--bg-light);
+    background-color: transparent;
 }
 
 .skills-grid-full {
@@ -691,7 +691,7 @@ section {
    ========================================== */
 
 .certifications-section {
-    background-color: var(--bg-white);
+    background-color: transparent;
 }
 
 .cert-grid {
@@ -748,7 +748,7 @@ section {
    ========================================== */
 
 .contact-section {
-    background-color: var(--bg-light);
+    background-color: transparent;
 }
 
 .contact-grid {
