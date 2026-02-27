@@ -63,6 +63,8 @@ footer,
 .specializations,
 .work,
 .publications,
+.publications-page-section,
+.blogs-page-section,
 .contact-section {
     position: relative;
     z-index: 1;
@@ -652,6 +654,180 @@ section {
 }
 
 /* ==========================================
+   PUBLICATIONS PAGE
+   ========================================== */
+
+.publications-page-section {
+    background-color: transparent;
+}
+
+.publications-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.publication-entry {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.publication-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.pub-entry-icon {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    flex-shrink: 0;
+}
+
+.pub-entry-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.pub-entry-content h3 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pub-entry-content h3 a:hover {
+    color: #00d4ff;
+    text-decoration: underline;
+}
+
+.pub-venue {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.pub-description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.pub-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pub-summary {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   BLOGS PAGE
+   ========================================== */
+
+.blogs-page-section {
+    background-color: transparent;
+}
+
+.blogs-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blog-entry {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.blog-entry-icon {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    flex-shrink: 0;
+}
+
+.blog-entry-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.blog-entry-content h3 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-entry-content h3 a:hover {
+    color: #00d4ff;
+    text-decoration: underline;
+}
+
+.blog-platform {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.blog-description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.blogs-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blogs-cta p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* ==========================================
    SKILLS PAGE
    ========================================== */
 
@@ -1115,6 +1291,12 @@ section {
     .skills-grid-full,
     .cert-grid {
         grid-template-columns: 1fr;
+    }
+
+    .publication-entry,
+    .blog-entry {
+        flex-direction: column;
+        text-align: center;
     }
 
     .contact-grid {

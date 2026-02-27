@@ -217,8 +217,14 @@ class PortfolioChatbot {
 
             // Publications questions
             publications: {
-                patterns: ['publication', 'paper', 'research', 'published', 'article', 'blog'],
-                response: "Nabil has published several research papers and technical articles:\n\n<strong>Academic Publications:</strong>\n\n1. <a href='https://doi.org/10.3390/biomedinformatics5030051' target='_blank'>Quantum-Enhanced Dual-Backbone Architecture for Accurate Gastrointestinal Disease Detection</a> (BioMedInformatics, 2025)\n\n2. <a href='https://www.researchgate.net/publication/386036129_Optimizing_Spare_Parts_Inventory_Management_Using_Genetic_Algorithm' target='_blank'>Optimizing Spare Parts Inventory Management Using Genetic Algorithm</a> (ICOA Conference, 2024)\n\n3. <a href='https://easychair.org/publications/preprint/xCx5' target='_blank'>LIDarknet: Experimenting the Power of Ensemble Learning in Network Traffic Classification</a> (IEEE Cyber Science, 2024)\n\n<strong>Technical Blogs:</strong>\n- <a href='https://medium.com/@nabilmarzoug49/data-science-web-scraping-with-python-b4b1d7655242' target='_blank'>Web Scraping with Python</a>\n- <a href='https://medium.com/@nabilmarzoug49/mastering-decision-trees-for-classification-unleashing-their-full-potential-13c018cbbfb5' target='_blank'>Mastering Decision Trees</a>"
+                patterns: ['publication', 'paper', 'research', 'published', 'article'],
+                response: "Nabil has published several research papers:\n\n<strong>Academic Publications:</strong>\n\n1. <a href='https://doi.org/10.3390/biomedinformatics5030051' target='_blank'>Quantum-Enhanced Dual-Backbone Architecture for Accurate Gastrointestinal Disease Detection</a> (BioMedInformatics, 2025)\n\n2. <a href='https://www.researchgate.net/publication/386036129_Optimizing_Spare_Parts_Inventory_Management_Using_Genetic_Algorithm' target='_blank'>Optimizing Spare Parts Inventory Management Using Genetic Algorithm</a> (ICOA Conference, 2024)\n\n3. <a href='https://easychair.org/publications/preprint/xCx5' target='_blank'>LIDarknet: Experimenting the Power of Ensemble Learning in Network Traffic Classification</a> (IEEE Cyber Science, 2024)\n\nVisit the <a href='publications.html'>Publications page</a> for full details!"
+            },
+
+            // Blog questions
+            blogs: {
+                patterns: ['blog', 'medium', 'writing', 'article'],
+                response: "Nabil writes technical blogs on Medium:\n\n- <a href='https://medium.com/@nabilmarzoug49/data-science-web-scraping-with-python-b4b1d7655242' target='_blank'>Web Scraping with Python</a>\n- <a href='https://medium.com/@nabilmarzoug49/mastering-decision-trees-for-classification-unleashing-their-full-potential-13c018cbbfb5' target='_blank'>Mastering Decision Trees</a>\n\nVisit the <a href='blogs.html'>Blogs page</a> for all articles!"
             },
 
             // Projects questions
