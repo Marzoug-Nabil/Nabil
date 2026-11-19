@@ -100,7 +100,7 @@ class UnifiedVisualManager {
             const y = Math.random() * this.canvas.height;
             const speedX = (Math.random() - 0.5) * 0.5;
             const speedY = (Math.random() - 0.5) * 0.5;
-            const hue = Math.random() * 60 + 200; // Blue/purple range
+            const hue = Math.random() * 100 + 185; // Cyan to violet range
 
             this.particles.push({
                 x,
@@ -126,26 +126,33 @@ class UnifiedVisualManager {
     }
 
     drawGradientBackground() {
-        // Animated gradient background
-        this.gradientOffset += 0.0005;
+        // Pure black base with slow-drifting aurora glows
+        this.gradientOffset += 0.003;
+        const w = this.canvas.width, h = this.canvas.height, t = this.gradientOffset;
+        this.ctx.fillStyle = '#000000';
+        this.ctx.fillRect(0, 0, w, h);
 
-        const gradient = this.ctx.createLinearGradient(
-            0,
-            0,
-            this.canvas.width,
-            this.canvas.height
-        );
+        const glows = [
+            { x: w * (0.15 + 0.08 * Math.sin(t)),       y: h * (0.2 + 0.06 * Math.cos(t * 0.8)), r: Math.max(w, h) * 0.45, c: '34, 211, 238', a: 0.10 },
+            { x: w * (0.85 + 0.06 * Math.cos(t * 0.7)), y: h * (0.7 + 0.08 * Math.sin(t * 0.9)), r: Math.max(w, h) * 0.5,  c: '168, 85, 247', a: 0.11 },
+            { x: w * (0.5 + 0.1 * Math.sin(t * 0.5)),   y: h * (1.05),                            r: Math.max(w, h) * 0.4,  c: '236, 72, 153', a: 0.06 }
+        ];
+        glows.forEach(g => {
+            const grad = this.ctx.createRadialGradient(g.x, g.y, 0, g.x, g.y, g.r);
+            grad.addColorStop(0, `rgba(${g.c}, ${g.a})`);
+            grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            this.ctx.fillStyle = grad;
+            this.ctx.fillRect(0, 0, w, h);
+        });
 
-        // Create shifting gradient colors
-        const hue1 = 220 + Math.sin(this.gradientOffset) * 20;
-        const hue2 = 260 + Math.cos(this.gradientOffset * 1.5) * 20;
-
-        gradient.addColorStop(0, `hsla(${hue1}, 70%, 15%, 1)`);
-        gradient.addColorStop(0.5, `hsla(${hue2}, 60%, 10%, 1)`);
-        gradient.addColorStop(1, `hsla(${hue1 + 20}, 70%, 12%, 1)`);
-
-        this.ctx.fillStyle = gradient;
-        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        // Soft spotlight that follows the mouse
+        if (this.mouse.x !== null) {
+            const spot = this.ctx.createRadialGradient(this.mouse.x, this.mouse.y, 0, this.mouse.x, this.mouse.y, 260);
+            spot.addColorStop(0, 'rgba(120, 160, 255, 0.10)');
+            spot.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            this.ctx.fillStyle = spot;
+            this.ctx.fillRect(0, 0, w, h);
+        }
     }
 
     drawParticles() {
@@ -201,7 +208,7 @@ class UnifiedVisualManager {
                 if (distance < maxDistance) {
                     const opacity = (1 - distance / maxDistance) * 0.3;
                     this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(100, 150, 255, ${opacity})`;
+                    this.ctx.strokeStyle = `rgba(140, 160, 255, ${opacity})`;
                     this.ctx.lineWidth = 0.5;
                     this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
                     this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
@@ -209,6 +216,23 @@ class UnifiedVisualManager {
                 }
             }
         }
+    }
+
+    drawMouseLinks() {
+        if (this.mouse.x === null) return;
+        const maxD = 180;
+        this.particles.forEach(p => {
+            const dx = p.x - this.mouse.x, dy = p.y - this.mouse.y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < maxD) {
+                this.ctx.beginPath();
+                this.ctx.strokeStyle = `rgba(34, 211, 238, ${(1 - d / maxD) * 0.45})`;
+                this.ctx.lineWidth = 0.7;
+                this.ctx.moveTo(this.mouse.x, this.mouse.y);
+                this.ctx.lineTo(p.x, p.y);
+                this.ctx.stroke();
+            }
+        });
     }
 
     drawFloatingShapes() {
@@ -268,6 +292,7 @@ class UnifiedVisualManager {
         this.drawGradientBackground();
         this.drawFloatingShapes();
         this.drawConnections();
+        this.drawMouseLinks();
         this.drawParticles();
     }
 
@@ -351,7 +376,7 @@ class UnifiedVisualManager {
         }, observerOptions);
 
         // Observe elements for fade-in animation
-        const elementsToAnimate = document.querySelectorAll('.spec-card, .work-card, .timeline-item, .skill-category, .cert-card');
+        const elementsToAnimate = document.querySelectorAll('.spec-card, .work-card, .timeline-item, .skill-category, .cert-card, .edu-card, .blog-entry, .contact-item, .resource-card');
         elementsToAnimate.forEach(el => this.observer.observe(el));
 
         // Lazy load images

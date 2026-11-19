@@ -8,7 +8,12 @@
     <meta name="author" content="Marzoug Nabil">
     <title>Marzoug Nabil - AI & ML Engineer</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -47,8 +52,10 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="fade-in">AI & Machine Learning Engineer</h1>
-                    <p class="hero-subtitle fade-in">Advancing Artificial Intelligence and Machine Learning through Research and Innovation</p>
+                    <p class="hero-kicker fade-in"><span class="pulse-dot"></span> M.Sc. AI researcher &middot; Université de Moncton</p>
+                    <h1 class="fade-in">Hi, I'm <span class="gradient-text">Nabil Marzoug</span></h1>
+                    <p class="hero-role fade-in"><span class="typed" data-words="Generative AI Researcher|Medical Imaging Scientist|Quantum ML Enthusiast|Data Science Lecturer"></span><span class="caret">|</span></p>
+                    <p class="hero-subtitle fade-in">I build generative and quantum-enhanced deep learning models for medical imaging, turning research into tools that help clinicians see more.</p>
                     <div class="hero-buttons fade-in">
                         <a href="Resume_EN.pdf" class="btn btn-primary" download>
                             <i class="fas fa-download"></i> CV (English)
@@ -59,6 +66,11 @@
                         <a href="contact.html" class="btn btn-secondary">
                             <i class="fas fa-envelope"></i> Get In Touch
                         </a>
+                    </div>
+                    <div class="hero-stats fade-in">
+                        <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">Publications</span></div>
+                        <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Journal articles</span></div>
+                        <div class="stat"><span class="stat-num" data-count="5" data-suffix="+">0</span><span class="stat-label">Years in AI</span></div>
                     </div>
                 </div>
                 <div class="hero-image fade-in">
@@ -73,9 +85,9 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>I am a Machine Learning Engineer with a strong interest in applying technology to real-world problems. I have a solid background in computer science, mathematics, and statistics, which allows me to approach projects with both analytical and practical perspectives.</p>
+                <p>I am an AI researcher pursuing a thesis-based Master’s in Computer Science (Artificial Intelligence) at Université de Moncton, where I also taught the graduate Data Analysis course. I hold an engineering degree in Data Science &amp; AI from ENSA Safi and enjoy applying technology to real-world problems. I have a solid background in computer science, mathematics, and statistics, which allows me to approach projects with both analytical and practical perspectives.</p>
                 <p>My work involves developing and evaluating machine learning models, managing data, and ensuring reliable and efficient results. I value clarity, precision, and continuous learning in every task I undertake.</p>
-                <p>I am also interested in the emerging field of Quantum Machine Learning, exploring its potential to enhance future computing systems.</p>
+                <p>At the PRIME Lab my research focuses on generative AI for medical imaging (VAEs, GANs and hybrid VAE-GANs for segmentation and synthetic data) and on quantum machine learning for medical image classification.</p>
             </div>
         </div>
     </section>
@@ -85,28 +97,42 @@
         <div class="container">
             <h2 class="section-title">What I Do</h2>
             <div class="spec-grid">
-                <div class="spec-card">
+                <div class="spec-card tilt">
+                    <div class="spec-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Generative AI</h3>
+                    <p>VAEs, GANs and hybrid VAE-GAN models for medical image segmentation and synthetic data augmentation.</p>
+                </div>
+                <div class="spec-card tilt">
+                    <div class="spec-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Robotics</h3>
+                    <p>Autonomous navigation with ROS 2 and Nav2, and robotic-arm control for real-world automation.</p>
+                </div>
+                <div class="spec-card tilt">
                     <div class="spec-icon">
                         <i class="fas fa-atom"></i>
                     </div>
                     <h3>Quantum Machine Learning</h3>
                     <p>Research and development in quantum computing applications for medical image classification and analysis.</p>
                 </div>
-                <div class="spec-card">
+                <div class="spec-card tilt">
                     <div class="spec-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Cybersecurity & ML</h3>
                     <p>Applying machine learning techniques to network traffic analysis and threat detection.</p>
                 </div>
-                <div class="spec-card">
+                <div class="spec-card tilt">
                     <div class="spec-icon">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>Deep Learning</h3>
                     <p>Building neural networks and advanced models for image classification, NLP, and more.</p>
                 </div>
-                <div class="spec-card">
+                <div class="spec-card tilt">
                     <div class="spec-icon">
                         <i class="fas fa-flask"></i>
                     </div>
@@ -122,7 +148,20 @@
         <div class="container">
             <h2 class="section-title">Featured Work</h2>
             <div class="work-grid">
-                <div class="work-card">
+                <div class="work-card tilt">
+                    <div class="work-header">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                        <h3>FCVGAN &mdash; Generative Polyp Segmentation</h3>
+                    </div>
+                    <p>A conditional VAE-GAN guided by fuzzy C-means clustering for polyp segmentation, published in <em>Sensors</em> (2026).</p>
+                    <div class="work-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">VAE-GAN</span>
+                        <span class="tag">Fuzzy C-Means</span>
+                    </div>
+                    <a href="https://doi.org/10.3390/s26196095" target="_blank" rel="noopener" class="work-link">Read Paper <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="work-card tilt">
                     <div class="work-header">
                         <i class="fas fa-dna"></i>
                         <h3>Quantum ML for Cancer Detection</h3>
@@ -136,7 +175,7 @@
                     </div>
                     <a href="experience.html" class="work-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="work-card">
+                <div class="work-card tilt">
                     <div class="work-header">
                         <i class="fas fa-network-wired"></i>
                         <h3>Cybersecurity Research</h3>
@@ -147,7 +186,7 @@
                         <span class="tag">XGBoost</span>
                         <span class="tag">SHAP</span>
                     </div>
-                    <a href="Research_paper.pdf" class="work-link">View Paper <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://easychair.org/publications/preprint/xCx5" target="_blank" rel="noopener" class="work-link">View Paper <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -160,7 +199,7 @@
             <div class="pub-grid">
                 <div class="pub-card">
                     <h4><i class="fas fa-file-alt"></i> Academic Publications</h4>
-                    <p class="pub-summary">3 published research papers in Quantum Computing, Optimization, and Cybersecurity across international conferences and journals.</p>
+                    <p class="pub-summary">7 research papers (4 journal articles, 3 conference papers) in generative AI, quantum ML, medical imaging, optimization and cybersecurity.</p>
                     <a href="publications.html" class="work-link">View All Publications <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="pub-card">
@@ -178,7 +217,7 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <h3>Marzoug Nabil</h3>
-                    <p>AI & Machine Learning Engineer</p>
+                    <p>AI Researcher &middot; Generative AI &amp; Medical Imaging</p>
                 </div>
                 <div class="footer-social">
                     <a href="https://github.com/Marzoug-Nabil" target="_blank"><i class="fab fa-github"></i></a>
@@ -188,12 +227,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Marzoug Nabil. All rights reserved.</p>
+                <p>&copy; 2026 Marzoug Nabil. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/visual-manager.js"></script>
+    <script src="js/fx.js"></script>
     <script src="js/chatbot.js"></script>
 </body>
 </html>

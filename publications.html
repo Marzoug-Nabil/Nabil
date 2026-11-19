@@ -8,7 +8,12 @@
     <meta name="author" content="Marzoug Nabil">
     <title>Publications - Marzoug Nabil</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -46,64 +51,108 @@
     <section class="page-header">
         <div class="container">
             <h1>Academic Publications</h1>
-            <p>Research contributions in AI, Quantum Computing, and Machine Learning</p>
+            <p>Research in generative AI, quantum machine learning and medical imaging</p>
         </div>
     </section>
 
     <!-- Publications Section -->
     <section class="publications-page-section">
         <div class="container">
+            <div class="stats-row">
+                <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">Publications</span></div>
+                <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Journal articles</span></div>
+                <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Conference papers</span></div>
+            </div>
+            <div class="pub-filters" role="tablist">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="journal">Journal Articles</button>
+                <button class="filter-btn" data-filter="conference">Conference Papers</button>
+            </div>
             <div class="publications-list">
-                <!-- Publication 1 -->
-                <div class="publication-entry">
-                    <div class="pub-entry-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
+                <article class="publication-entry tilt" data-type="journal">
+                    <div class="pub-entry-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
                     <div class="pub-entry-content">
-                        <h3><a href="https://doi.org/10.3390/biomedinformatics5030051" target="_blank">Quantum-Enhanced Dual-Backbone Architecture for Accurate Gastrointestinal Disease Detection Using Endoscopic Imaging</a></h3>
-                        <p class="pub-venue"><em>BioMedInformatics</em>, September 2025</p>
-                        <p class="pub-description">Research on integrating quantum computing with dual-backbone deep learning architectures for improved gastrointestinal disease detection from endoscopic images.</p>
-                        <div class="pub-tags">
-                            <span class="tag">Quantum Computing</span>
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">Medical Imaging</span>
-                        </div>
+                        <div class="pub-meta"><span class="pub-year">2026</span><span class="pub-kind">Journal</span></div>
+                        <h3><a href="https://doi.org/10.3390/s26196095" target="_blank" rel="noopener">FCVGAN: A Novel Generative Framework Integrating Fuzzy C-Means Clustering with Conditional VAE-GAN for Polyp Segmentation</a></h3>
+                        <p class="pub-authors"><strong>N. Marzoug</strong>, M. A. Akhloufi</p>
+                        <p class="pub-venue"><em>Sensors</em>, 26(19):6095</p>
+                        <p class="pub-description">A generative framework that couples fuzzy C-means clustering with a conditional VAE-GAN to improve polyp segmentation in colonoscopy images.</p>
+                        <div class="pub-tags"><span class="tag">Generative AI</span><span class="tag">VAE-GAN</span><span class="tag">Medical Segmentation</span></div>
+                        <a href="https://doi.org/10.3390/s26196095" target="_blank" rel="noopener" class="pub-link">Read paper <i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-
-                <!-- Publication 2 -->
-                <div class="publication-entry">
-                    <div class="pub-entry-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
+                </article>
+                <article class="publication-entry tilt" data-type="journal">
+                    <div class="pub-entry-icon"><i class="fas fa-book-open"></i></div>
                     <div class="pub-entry-content">
-                        <h3><a href="https://www.researchgate.net/publication/386036129_Optimizing_Spare_Parts_Inventory_Management_Using_Genetic_Algorithm" target="_blank">Optimizing Spare Parts Inventory Management Using Genetic Algorithm</a></h3>
-                        <p class="pub-venue"><em>Proceedings of the 10th International Conference on Optimization and Applications (ICOA)</em>, October 2024</p>
-                        <p class="pub-description">Application of genetic algorithms for optimizing spare parts inventory management, improving efficiency and reducing costs in supply chain operations.</p>
-                        <div class="pub-tags">
-                            <span class="tag">Genetic Algorithm</span>
-                            <span class="tag">Optimization</span>
-                            <span class="tag">Inventory Management</span>
-                        </div>
+                        <div class="pub-meta"><span class="pub-year">2026</span><span class="pub-kind">Journal</span></div>
+                        <h3><a href="https://doi.org/10.3390/jimaging12100481" target="_blank" rel="noopener">Variational Autoencoders for Medical Image Segmentation: A Review</a></h3>
+                        <p class="pub-authors"><strong>N. Marzoug</strong>, M. A. Akhloufi</p>
+                        <p class="pub-venue"><em>Journal of Imaging</em>, 12(10):481</p>
+                        <p class="pub-description">A comprehensive review of variational autoencoder architectures and their use in medical image segmentation.</p>
+                        <div class="pub-tags"><span class="tag">VAEs</span><span class="tag">Review</span><span class="tag">Medical Imaging</span></div>
+                        <a href="https://doi.org/10.3390/jimaging12100481" target="_blank" rel="noopener" class="pub-link">Read paper <i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-
-                <!-- Publication 3 -->
-                <div class="publication-entry">
-                    <div class="pub-entry-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
+                </article>
+                <article class="publication-entry tilt" data-type="journal">
+                    <div class="pub-entry-icon"><i class="fas fa-atom"></i></div>
                     <div class="pub-entry-content">
-                        <h3><a href="https://easychair.org/publications/preprint/xCx5" target="_blank">LIDarknet: Experimenting the Power of Ensemble Learning in the Classification of Network Traffic</a></h3>
-                        <p class="pub-venue"><em>8<sup>th</sup> IEEE Cyber Science and Technology Congress</em>, 2024</p>
-                        <p class="pub-description">State-of-the-art results in network traffic classification using ensemble learning methods for cybersecurity applications, surpassing previous benchmarks on the CICDarknet-2020 dataset.</p>
-                        <div class="pub-tags">
-                            <span class="tag">Cybersecurity</span>
-                            <span class="tag">Ensemble Learning</span>
-                            <span class="tag">Network Traffic</span>
-                        </div>
+                        <div class="pub-meta"><span class="pub-year">2026</span><span class="pub-kind">Journal</span></div>
+                        <h3><a href="https://doi.org/10.3390/bdcc10010012" target="_blank" rel="noopener">QU-Net: Quantum-Enhanced U-Net for Self Supervised Embedding and Classification of Skin Cancer Images</a></h3>
+                        <p class="pub-authors">K. Halab, <strong>N. Marzoug</strong>, O. El Meslouhi, Z. E. Abou Elassad, M. A. Akhloufi</p>
+                        <p class="pub-venue"><em>Big Data and Cognitive Computing</em>, 10(1):12</p>
+                        <p class="pub-description">A quantum-enhanced U-Net that learns self-supervised embeddings for skin cancer image classification.</p>
+                        <div class="pub-tags"><span class="tag">Quantum ML</span><span class="tag">Self-Supervised</span><span class="tag">Skin Cancer</span></div>
+                        <a href="https://doi.org/10.3390/bdcc10010012" target="_blank" rel="noopener" class="pub-link">Read paper <i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
+                </article>
+                <article class="publication-entry tilt" data-type="journal">
+                    <div class="pub-entry-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="pub-entry-content">
+                        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-kind">Journal</span></div>
+                        <h3><a href="https://doi.org/10.3390/biomedinformatics5030051" target="_blank" rel="noopener">Quantum-Enhanced Dual-Backbone Architecture for Accurate Gastrointestinal Disease Detection Using Endoscopic Imaging</a></h3>
+                        <p class="pub-authors"><strong>N. Marzoug</strong>, K. Halab, O. El Meslouhi, Z. E. Abou Elassad, M. A. Akhloufi</p>
+                        <p class="pub-venue"><em>BioMedInformatics</em>, 5(3):51</p>
+                        <p class="pub-description">Integrating quantum computing with dual-backbone deep learning architectures for improved gastrointestinal disease detection from endoscopic images.</p>
+                        <div class="pub-tags"><span class="tag">Quantum Computing</span><span class="tag">Deep Learning</span><span class="tag">Medical Imaging</span></div>
+                        <a href="https://doi.org/10.3390/biomedinformatics5030051" target="_blank" rel="noopener" class="pub-link">Read paper <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+                <article class="publication-entry tilt" data-type="conference">
+                    <div class="pub-entry-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="pub-entry-content">
+                        <div class="pub-meta"><span class="pub-year">2026</span><span class="pub-kind">Conference</span></div>
+                        <h3>Hybrid Generative Architecture for Synthetic Data Augmentation in Fungi Segmentation</h3>
+                        <p class="pub-authors"><strong>N. Marzoug</strong>, M. A. Akhloufi</p>
+                        <p class="pub-venue"><em>IEA/AIE 2026</em> &mdash; International Conference on Industrial, Engineering &amp; Other Applications of Applied Intelligent Systems, Kuala Lumpur, Malaysia (Springer)</p>
+                        <p class="pub-description">A hybrid generative architecture that produces synthetic training data to boost fungi segmentation performance.</p>
+                        <div class="pub-tags"><span class="tag">Generative AI</span><span class="tag">Data Augmentation</span><span class="tag">Segmentation</span></div>
+                        <span class="pub-badge">Accepted &middot; Springer</span>
+                    </div>
+                </article>
+                <article class="publication-entry tilt" data-type="conference">
+                    <div class="pub-entry-icon"><i class="fas fa-dna"></i></div>
+                    <div class="pub-entry-content">
+                        <div class="pub-meta"><span class="pub-year">2024</span><span class="pub-kind">Conference</span></div>
+                        <h3><a href="https://www.researchgate.net/publication/386036129_Optimizing_Spare_Parts_Inventory_Management_Using_Genetic_Algorithm" target="_blank" rel="noopener">Optimizing Spare Parts Inventory Management Using Genetic Algorithm</a></h3>
+                        <p class="pub-authors">H. El Hadaf, <strong>N. Marzoug</strong>, A. Jraifi</p>
+                        <p class="pub-venue"><em>International Conference on Optimization and Applications (ICOA 2024)</em>, IEEE</p>
+                        <p class="pub-description">Genetic algorithms for optimizing spare parts inventory management, improving efficiency and reducing costs in supply chain operations.</p>
+                        <div class="pub-tags"><span class="tag">Genetic Algorithm</span><span class="tag">Optimization</span><span class="tag">Supply Chain</span></div>
+                        <a href="https://www.researchgate.net/publication/386036129_Optimizing_Spare_Parts_Inventory_Management_Using_Genetic_Algorithm" target="_blank" rel="noopener" class="pub-link">Read paper <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+                <article class="publication-entry tilt" data-type="conference">
+                    <div class="pub-entry-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="pub-entry-content">
+                        <div class="pub-meta"><span class="pub-year">2023</span><span class="pub-kind">Conference</span></div>
+                        <h3><a href="https://easychair.org/publications/preprint/xCx5" target="_blank" rel="noopener">LIDarknet: Experimenting the Power of Ensemble Learning in the Classification of Network Traffic</a></h3>
+                        <p class="pub-authors"><strong>N. Marzoug</strong>, K. Halab, Y. Mamma, et al.</p>
+                        <p class="pub-venue"><em>8<sup>th</sup> IEEE Cyber Science and Technology Congress (CyberSciTech 2023)</em></p>
+                        <p class="pub-description">State-of-the-art network traffic classification on CICDarknet-2020 using ensemble learning for cybersecurity.</p>
+                        <div class="pub-tags"><span class="tag">Cybersecurity</span><span class="tag">Ensemble Learning</span><span class="tag">Network Traffic</span></div>
+                        <a href="https://easychair.org/publications/preprint/xCx5" target="_blank" rel="noopener" class="pub-link">Read paper <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -114,7 +163,7 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <h3>Marzoug Nabil</h3>
-                    <p>AI & Machine Learning Engineer</p>
+                    <p>AI Researcher &middot; Generative AI &amp; Medical Imaging</p>
                 </div>
                 <div class="footer-social">
                     <a href="https://github.com/Marzoug-Nabil" target="_blank"><i class="fab fa-github"></i></a>
@@ -124,12 +173,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Marzoug Nabil. All rights reserved.</p>
+                <p>&copy; 2026 Marzoug Nabil. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/visual-manager.js"></script>
+    <script src="js/fx.js"></script>
     <script src="js/chatbot.js"></script>
 </body>
 </html>
