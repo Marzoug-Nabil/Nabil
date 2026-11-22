@@ -53,7 +53,7 @@
         // ---------- Card spotlight + tilt ----------
         const cards = document.querySelectorAll(
             '.spec-card, .work-card, .pub-card, .pub-item, .publication-entry, .timeline-content, ' +
-            '.skill-category, .cert-card, .blog-entry, .contact-item, .resource-card, .edu-card'
+            '.skill-category, .cert-card, .blog-entry, .contact-item, .resource-card, .edu-card, .session-card, .course-hero'
         );
         cards.forEach((card) => {
             card.addEventListener('mousemove', (e) => {
@@ -154,5 +154,19 @@
                 });
             });
         });
+        // ---------- Teaching page: slide language switch ----------
+        const langBtns = document.querySelectorAll('.lang-btn[data-set-lang]');
+        if (langBtns.length) {
+            const setLang = (lang) => {
+                document.body.classList.toggle('lang-en', lang === 'en');
+                document.body.classList.toggle('lang-fr', lang === 'fr');
+                langBtns.forEach((b) => b.classList.toggle('active', b.dataset.setLang === lang));
+                try { localStorage.setItem('slideLang', lang); } catch (e) { /* storage unavailable */ }
+            };
+            let saved = null;
+            try { saved = localStorage.getItem('slideLang'); } catch (e) { /* storage unavailable */ }
+            if (saved === 'en' || saved === 'fr') setLang(saved);
+            langBtns.forEach((b) => b.addEventListener('click', () => setLang(b.dataset.setLang)));
+        }
     });
 })();
