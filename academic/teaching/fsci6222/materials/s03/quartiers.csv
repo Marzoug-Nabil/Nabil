@@ -1,0 +1,9 @@
+ville,quartier,score_ecole,score_securite,distance_centre_km,population
+Moncton,Centre,7.5,8.0,0.5,15000
+Moncton,Nord,6.8,7.2,3.5,12000
+Moncton,Ouest,8.2,8.5,2.0,18000
+Dieppe,Centre,8.0,8.8,1.0,20000
+Dieppe,Sud,7.5,8.0,2.5,16000
+Fredericton,Centre,8.5,9.0,0.3,14000
+Fredericton,Nord,7.0,7.5,4.0,10000
+Bathurst,Centre,6.5,7.0,0.5,8000

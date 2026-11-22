@@ -1,0 +1,43 @@
+id,nom,prenom,departement,poste,ville,salaire,annees_experience,heures_formation,nb_projets,note_evaluation,satisfaction,age,sexe,type_contrat,date_embauche
+1,Tremblay,Sophie,Développement,Développeuse Senior,Moncton,82000,8,45,12,4.5,5,34,F,Permanent,2018-03-15
+2,Landry,Marc,Données,Analyste Junior,Dieppe,52000,2,20,4,3.2,3,26,M,Permanent,2024-01-10
+3,Cormier,Julie,Développement,Développeuse Junior,Moncton,55000,1,35,3,3.8,4,24,F,Contractuel,2025-02-01
+4,LeBlanc,Pierre,Infrastructure,Administrateur Système,Fredericton,68000,5,30,8,4.0,4,32,M,Permanent,2021-06-20
+5,Richard,Anne,Données,Scientifique de données,Moncton,95000,10,60,18,4.8,5,38,F,Permanent,2016-09-01
+6,Gallant,Luc,Développement,Développeur Senior,Dieppe,,7,40,11,4.2,4,35,M,Permanent,2019-04-15
+7,Boucher,Nathalie,Marketing,Spécialiste Marketing,Moncton,58000,3,15,6,3.5,3,28,F,Permanent,2023-07-01
+8,Doucet,Jean,Infrastructure,DevOps,Moncton,78000,6,50,10,4.3,5,33,M,Permanent,2020-01-15
+9,Arsenault,Claire,Données,Analyste Senior,Fredericton,72000,5,25,9,4.1,4,31,F,Permanent,2021-03-10
+10,Melanson,Tom,Développement,Développeur Junior,Moncton,48000,1,30,2,3.0,2,23,M,Contractuel,2025-01-15
+11,Robichaud,Eve,Marketing,Directrice Marketing,Dieppe,88000,9,20,15,4.6,5,40,F,Permanent,2017-05-20
+12,Leger,Paul,Données,Ingénieur Données,Moncton,85000,7,55,14,4.4,4,36,M,Permanent,2019-08-01
+13,Savoie,Diane,Développement,Développeuse Senior,Fredericton,80000,8,42,13,4.5,5,37,F,Permanent,2018-11-01
+14,Goguen,Michel,Infrastructure,Administrateur Réseau,Moncton,62000,4,28,7,3.6,3,30,M,Permanent,2022-02-15
+15,Cyr,Louise,Données,Analyste Junior,Dieppe,50000,,18,3,3.1,3,25,F,Contractuel,2024-06-01
+16,Maillet,Jacques,Développement,Architecte Logiciel,Moncton,105000,12,65,20,4.9,5,42,M,Permanent,2014-03-01
+17,Chiasson,Rosa,Marketing,Analyste Marketing,Moncton,54000,2,12,5,3.3,3,27,F,Permanent,2024-03-15
+18,Babineau,Guy,Infrastructure,Ingénieur Cloud,Fredericton,90000,8,48,16,4.7,5,39,M,Permanent,2018-07-01
+19,Poirier,Emilie,Données,Scientifique de données,Moncton,92000,9,58,17,4.8,5,37,F,Permanent,2017-01-15
+20,Levesque,Alex,Développement,Développeur Full Stack,Dieppe,72000,4,38,8,3.9,4,29,M,Permanent,2022-05-01
+21,Gaudet,Sylvie,Marketing,Coordonnatrice,Moncton,48000,2,10,4,,2,26,F,Contractuel,2024-08-01
+22,Vienneau,Simon,Développement,Développeur Backend,Moncton,65000,3,32,6,3.7,4,28,M,Permanent,2023-01-10
+23,Comeau,Lucie,Infrastructure,Analyste Sécurité,Fredericton,75000,5,40,9,4.2,4,33,F,Permanent,2021-09-01
+24,Albert,Denis,Données,Analyste Senior,Moncton,70000,5,22,8,4.0,4,32,M,Permanent,2021-04-15
+25,Hache,Catherine,Développement,QA Lead,Dieppe,68000,6,35,10,4.1,4,34,F,Permanent,2020-06-01
+26,Doiron,Robert,Infrastructure,SysAdmin Junior,Moncton,45000,1,20,2,2.8,2,22,M,Contractuel,2025-03-01
+27,Nowlan,Manon,Marketing,Directrice Comm.,Fredericton,82000,8,18,14,4.4,5,41,F,Permanent,2018-02-01
+28,Surette,Yves,Données,Data Engineer,Dieppe,88000,7,52,13,4.5,4,36,M,Permanent,2019-05-15
+29,Belliveau,Isabelle,Développement,Développeuse Frontend,Moncton,60000,3,28,5,3.5,3,27,F,Permanent,2023-04-01
+30,Caron,Patrick,Infrastructure,Cloud Architect,Moncton,98000,10,62,19,4.9,5,41,M,Permanent,2016-06-01
+31,Tremblay,Sophie,Développement,Développeuse Senior,Moncton,82000,8,45,12,4.5,5,34,F,Permanent,2018-03-15
+32,Daigle,Claude,Données,Analyste Junior,moncton,51000,2,16,3,3.0,3,24,M,contractuel,2024-09-01
+33,Fontaine,Marie,Développement,Développeuse Junior,Dieppe,53000,1,25,2,3.2,3,23,F,permanent,2025-01-20
+34,Gagnon,Eric,Marketing,Designer UX,Moncton,62000,4,22,7,3.8,4,30,M,Permanent,15-06-2022
+35,Hebert,Suzanne,Infrastructure,Ingénieure Réseau,Fredericton,73000,5,38,9,4.1,4,34,F,Permanent,2021-08-01
+36,Imbeault,Andre,Données,ML Engineer,Moncton,96000,9,deux,16,4.7,5,38,M,Permanent,2017-04-01
+37,Jean,Daniel,Développement,Développeur Mobile,Dieppe,67000,4,34,7,3.8,4,31,M,Permanent,2022-10-01
+38,Keswick,Catherine,Marketing,Community Manager,Moncton,46000,1,8,3,2.9,2,24,F,Contractuel,2025-02-15
+39,Lavoie,Michele,Infrastructure,DevSecOps,Fredericton,85000,7,45,12,4.4,5,36,F,Permanent,2019-11-01
+40,Martin,Bruno,Données,Data Analyst,Moncton,1650000,3,20,5,3.4,3,28,M,Permanent,2023-06-01
+41,Nadeau,Sophie,Développement,Scrum Master,Moncton,75000,6,30,11,4.2,4,35,F,Permanent,2020-03-15
+42,Ouellette,François,Infrastructure,Network Engineer,Dieppe,70000,5,-35,8,3.9,4,32,M,Permanent,2021-12-01

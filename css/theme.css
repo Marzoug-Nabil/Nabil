@@ -352,3 +352,46 @@ body.cursor-hover .cursor-ring { width: 64px; height: 64px; background: rgba(255
     .nav-menu { gap: 1.1rem; }
     .nav-menu a { font-size: .92rem; }
 }
+
+/* BibTeX toggles on publication cards */
+.pub-cite { margin-top: .8rem; }
+.pub-cite .bibtex summary {
+  display: inline-flex; align-items: center; gap: .35rem; cursor: pointer; list-style: none;
+  font: 500 .8rem/1 "JetBrains Mono", monospace; color: var(--cyan);
+  padding: .4rem .7rem; border: 1px solid rgba(34, 211, 238, .35); border-radius: 999px;
+}
+.pub-cite .bibtex summary::-webkit-details-marker { display: none; }
+.pub-cite .bibtex summary::before { content: "{ }"; opacity: .7; }
+.pub-cite .bibtex summary:hover { background: rgba(34, 211, 238, .08); }
+.pub-cite .bibtex pre {
+  margin: .7rem 0 0; padding: .9rem 1rem; border-radius: 10px; overflow-x: auto;
+  background: rgba(255, 255, 255, .03); border: 1px solid rgba(255, 255, 255, .08);
+  font: .76rem/1.5 "JetBrains Mono", monospace; color: #cbd5e1; white-space: pre;
+}
+.pub-cite .bib-copy {
+  display: none; margin-left: .5rem; cursor: pointer; font: 500 .75rem/1 "JetBrains Mono", monospace;
+  padding: .4rem .7rem; border-radius: 999px; color: #0b0b0f; background: var(--cyan); border: 0;
+}
+.pub-cite .bibtex[open] .bib-copy { display: inline-block; }
+
+/* Projects page */
+.projects-more { text-align: center; margin-top: 2.5rem; }
+/* 8 menu links: tighten on mid-size screens */
+@media (min-width: 769px) and (max-width: 1240px) { .nav-menu { gap: .85rem; } .nav-menu a { font-size: .88rem; } }
+@media (min-width: 769px) and (max-width: 960px) { .nav-brand h2 { font-size: 1.15rem; } .nav-menu { gap: .6rem; } .nav-menu a { font-size: .82rem; } }
+
+/* Keyboard focus */
+a:focus-visible, button:focus-visible, .hamburger:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px;
+}
+
+/* EN/FR switch */
+.nav-menu .lang-switch a {
+  font: 600 .78rem/1 "JetBrains Mono", monospace; letter-spacing: .06em;
+  padding: .35rem .55rem; border: 1px solid rgba(255,255,255,.18); border-radius: 999px;
+}
+.nav-menu .lang-switch a:hover { border-color: var(--cyan); color: var(--cyan); }
+.nav-menu .lang-switch a::after { display: none !important; }
+.pub-cite .bibtex { position: relative; }
+.pub-cite .bibtex .bib-copy { position: absolute; right: .6rem; top: 2.9rem; margin: 0; }
+.hero-image img { height: auto; }

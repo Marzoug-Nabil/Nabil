@@ -75,7 +75,11 @@ class UnifiedVisualManager {
         this.createParticles();
 
         // Event listeners for canvas
-        window.addEventListener('resize', () => this.resizeCanvas());
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => this.resizeCanvas(), 150);
+        });
         window.addEventListener('mousemove', (e) => this.handleMouseMove(e));
         window.addEventListener('mouseout', () => this.handleMouseOut());
     }
@@ -87,12 +91,17 @@ class UnifiedVisualManager {
         // Recreate particles on resize
         if (this.particles.length > 0) {
             this.createParticles();
+            if (!this.animationId) this.renderCanvas(); // static mode: redraw the cleared canvas
         }
     }
 
     createParticles() {
         this.particles = [];
-        const numberOfParticles = Math.floor((this.canvas.width * this.canvas.height) / 15000);
+        // Density-based count, capped so large screens and phones stay smooth
+        const small = window.innerWidth < 768;
+        const density = small ? 26000 : 15000;
+        const cap = small ? 45 : 120;
+        const numberOfParticles = Math.min(cap, Math.floor((this.canvas.width * this.canvas.height) / density));
 
         for (let i = 0; i < numberOfParticles; i++) {
             const size = Math.random() * 3 + 1;
@@ -186,13 +195,15 @@ class UnifiedVisualManager {
             if (particle.y < 0) particle.y = this.canvas.height;
 
             // Draw particle
+            // soft halo + core (much cheaper than canvas shadowBlur)
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.size * 2.6, 0, Math.PI * 2);
+            this.ctx.fillStyle = `hsla(${particle.hue}, 80%, 60%, 0.12)`;
+            this.ctx.fill();
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            this.ctx.fillStyle = `hsla(${particle.hue}, 80%, 60%, 0.8)`;
-            this.ctx.shadowBlur = 10;
-            this.ctx.shadowColor = `hsla(${particle.hue}, 80%, 60%, 0.5)`;
+            this.ctx.fillStyle = `hsla(${particle.hue}, 80%, 60%, 0.85)`;
             this.ctx.fill();
-            this.ctx.shadowBlur = 0;
         });
     }
 
@@ -308,6 +319,9 @@ class UnifiedVisualManager {
         // Mobile menu toggle
         if (this.hamburger && this.navMenu) {
             this.hamburger.addEventListener('click', () => this.toggleMobileMenu());
+            this.hamburger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.toggleMobileMenu(); }
+            });
 
             // Close menu when clicking on a link
             const navLinks = this.navMenu.querySelectorAll('a');
@@ -322,6 +336,7 @@ class UnifiedVisualManager {
 
     toggleMobileMenu() {
         this.navMenu.classList.toggle('active');
+        this.hamburger.setAttribute('aria-expanded', this.navMenu.classList.contains('active'));
 
         // Animate hamburger icon
         const spans = this.hamburger.querySelectorAll('span');
@@ -449,7 +464,7 @@ class UnifiedVisualManager {
         navigator.clipboard.writeText(text).then(() => {
             // Create temporary notification
             const notification = document.createElement('div');
-            notification.textContent = 'Email copied to clipboard!';
+            notification.textContent = (document.documentElement.lang || '').startsWith('fr') ? 'Courriel copié dans le presse-papiers !' : 'Email copied to clipboard!';
             notification.style.cssText = `
                 position: fixed;
                 bottom: 20px;
@@ -483,6 +498,22 @@ class UnifiedVisualManager {
         // Render canvas layer (particles, gradients, shapes)
         this.renderCanvas();
 
+        // Respect reduced-motion: keep a single static frame
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            this.animationId = null;
+            return;
+        }
+        // Pause while the tab is hidden; resume when visible again
+        if (document.hidden) {
+            this.animationId = null;
+            if (!this._visHook) {
+                this._visHook = true;
+                document.addEventListener('visibilitychange', () => {
+                    if (!document.hidden && !this.animationId) this.render();
+                });
+            }
+            return;
+        }
         // Continue animation loop
         this.animationId = requestAnimationFrame(() => this.render());
     }

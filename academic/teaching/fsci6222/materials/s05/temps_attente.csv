@@ -1,0 +1,51 @@
+client_id,jour,heure_arrivee,temps_attente_min,type_service,satisfaction
+1,Lundi,09:15,3.2,Guichet,4
+2,Lundi,09:22,5.1,Guichet,3
+3,Lundi,09:45,2.8,En ligne,5
+4,Lundi,10:10,8.5,Guichet,2
+5,Lundi,10:30,4.2,En ligne,4
+6,Lundi,11:00,6.7,Guichet,3
+7,Lundi,11:15,1.5,En ligne,5
+8,Lundi,13:30,12.3,Guichet,1
+9,Lundi,14:00,9.1,Guichet,2
+10,Lundi,14:20,3.8,En ligne,4
+11,Mardi,09:00,2.1,Guichet,5
+12,Mardi,09:30,4.5,En ligne,4
+13,Mardi,10:00,7.2,Guichet,3
+14,Mardi,10:45,3.3,En ligne,4
+15,Mardi,11:30,5.8,Guichet,3
+16,Mardi,13:00,11.2,Guichet,1
+17,Mardi,13:45,8.9,Guichet,2
+18,Mardi,14:15,2.7,En ligne,5
+19,Mardi,15:00,6.1,Guichet,3
+20,Mardi,15:30,4.0,En ligne,4
+21,Mercredi,09:10,3.5,Guichet,4
+22,Mercredi,09:40,2.2,En ligne,5
+23,Mercredi,10:20,6.8,Guichet,3
+24,Mercredi,11:00,4.1,En ligne,4
+25,Mercredi,11:30,9.5,Guichet,2
+26,Mercredi,13:15,13.1,Guichet,1
+27,Mercredi,14:00,7.3,Guichet,2
+28,Mercredi,14:30,3.0,En ligne,5
+29,Mercredi,15:00,5.5,Guichet,3
+30,Mercredi,15:45,2.4,En ligne,5
+31,Jeudi,09:05,4.8,Guichet,3
+32,Jeudi,09:50,3.1,En ligne,4
+33,Jeudi,10:15,7.9,Guichet,2
+34,Jeudi,10:55,2.6,En ligne,5
+35,Jeudi,11:20,5.3,Guichet,3
+36,Jeudi,13:10,10.8,Guichet,1
+37,Jeudi,13:50,8.2,Guichet,2
+38,Jeudi,14:25,3.4,En ligne,4
+39,Jeudi,15:10,6.5,Guichet,3
+40,Jeudi,15:40,1.9,En ligne,5
+41,Vendredi,09:20,5.6,Guichet,3
+42,Vendredi,09:55,2.9,En ligne,4
+43,Vendredi,10:30,8.1,Guichet,2
+44,Vendredi,11:05,3.7,En ligne,4
+45,Vendredi,11:40,6.2,Guichet,3
+46,Vendredi,13:25,14.5,Guichet,1
+47,Vendredi,14:10,9.8,Guichet,2
+48,Vendredi,14:50,4.3,En ligne,4
+49,Vendredi,15:20,7.0,Guichet,3
+50,Vendredi,16:00,2.5,En ligne,5

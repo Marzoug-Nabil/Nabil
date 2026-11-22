@@ -4,12 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nabil Marzoug — Teaching &amp; Academic Material</title>
-  <meta name="description" content="Lecture slides, course material and publications by Nabil Marzoug, Université de Moncton.">
+  <meta name="description" content="Lecture slides (English and French), notebooks, labs and exams for FSCI 6222 Data Analysis, plus publications, by Nabil Marzoug, Université de Moncton.">
+  <link rel="canonical" href="https://marzoug-nabil.github.io/Nabil/academic/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nabil Marzoug">
+  <meta property="og:title" content="Nabil Marzoug — Teaching &amp; Academic Material">
+  <meta property="og:description" content="Lecture slides (English and French), notebooks, labs and exams for FSCI 6222 Data Analysis, plus publications, by Nabil Marzoug, Université de Moncton.">
+  <meta property="og:url" content="https://marzoug-nabil.github.io/Nabil/academic/">
+  <meta property="og:image" content="https://marzoug-nabil.github.io/Nabil/academic/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nabil Marzoug — Teaching &amp; Academic Material">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nabil Marzoug — Teaching &amp; Academic Material">
+  <meta name="twitter:description" content="Lecture slides (English and French), notebooks, labs and exams for FSCI 6222 Data Analysis, plus publications, by Nabil Marzoug, Université de Moncton.">
+  <meta name="twitter:image" content="https://marzoug-nabil.github.io/Nabil/academic/og-image.jpg">
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script src="../js/bibtex.js" defer></script>
 </head>
 <body>
   <header class="top">
@@ -20,7 +35,8 @@
         <a href="../index.html">Portfolio</a> ·
         <a href="mailto:nabilmarzoug7@gmail.com">Email</a> ·
         <a href="https://github.com/Marzoug-Nabil">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/marzoug-nabil-427103229/">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/marzoug-nabil-427103229/">LinkedIn</a> ·
+        <a href="https://orcid.org/0009-0009-7053-5928">ORCID</a>
       </p>
       <nav class="toc">
         <a href="#teaching">Teaching</a>
@@ -40,11 +56,12 @@
         <p>A hands-on introduction to data analysis with Python: NumPy and pandas, data cleaning and visualization,
         descriptive statistics, probability, correlation and regression, dimensionality reduction (PCA, t-SNE),
         and introductions to machine learning and deep learning. Each session paired slides with a Jupyter notebook on real datasets.</p>
-        <p class="note">The course was taught in French. Slides are available in the original French (FR) and in an English translation (EN) with the same layout.</p>
+        <p class="note">The course was taught in French. Slides are available in the original French (FR) and in an English translation (EN) with the same layout.
+        Notebooks are in French; <b>Colab</b> opens one in Google Colab (its first cell downloads the session's datasets), and <b>zip</b> downloads the notebook with its data.</p>
 
         <table class="sessions">
           <thead>
-            <tr><th>#</th><th>Session</th><th>Slides</th><th>Handouts</th></tr>
+            <tr><th>#</th><th>Session</th><th>Slides</th><th>Handouts</th><th>Notebook</th></tr>
           </thead>
           <tbody>
           <tr>
@@ -52,60 +69,101 @@
             <td>Introduction to Python and the Environment<div class="fr" lang="fr">Introduction à Python et à l'environnement</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s01-intro-python.pdf">EN</a> · <a href="teaching/fsci6222/fr/s01-intro-python.pdf" hreflang="fr">FR</a></td>
             <td class="hand">Recursion <span class="pdf">(<a href="teaching/fsci6222/en/s01-recursivite.pdf">EN</a> · <a href="teaching/fsci6222/fr/s01-recursivite.pdf" hreflang="fr">FR</a>)</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s01/FSCI6222_S1_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s01/fsci6222-s01.zip" download>zip</a></td>
           </tr>
           <tr>
             <td class="num">2</td>
             <td>NumPy and pandas<div class="fr" lang="fr">NumPy et pandas</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s02-numpy-pandas.pdf">EN</a> · <a href="teaching/fsci6222/fr/s02-numpy-pandas.pdf" hreflang="fr">FR</a></td>
             <td class="hand">Vector operations <span class="pdf">(<a href="teaching/fsci6222/en/s02-operations-vectorielles.pdf">EN</a> · <a href="teaching/fsci6222/fr/s02-operations-vectorielles.pdf" hreflang="fr">FR</a>)</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s02/FSCI6222_S2_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s02/fsci6222-s02.zip" download>zip</a></td>
           </tr>
           <tr>
             <td class="num">3</td>
             <td>Data Cleaning and Visualization<div class="fr" lang="fr">Nettoyage et visualisation des données</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s03-nettoyage-visualisation.pdf">EN</a> · <a href="teaching/fsci6222/fr/s03-nettoyage-visualisation.pdf" hreflang="fr">FR</a></td>
             <td class="hand"><span class="muted">—</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s03/FSCI6222_S3_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s03/fsci6222-s03.zip" download>zip</a></td>
           </tr>
           <tr>
             <td class="num">4</td>
             <td>Descriptive Statistics<div class="fr" lang="fr">Statistiques descriptives</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s04-statistiques-descriptives.pdf">EN</a> · <a href="teaching/fsci6222/fr/s04-statistiques-descriptives.pdf" hreflang="fr">FR</a></td>
             <td class="hand"><span class="muted">—</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s04/FSCI6222_S4_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s04/fsci6222-s04.zip" download>zip</a></td>
           </tr>
           <tr>
             <td class="num">5</td>
             <td>Probability and Distributions<div class="fr" lang="fr">Probabilités et distributions</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s05-probabilites-distributions.pdf">EN</a> · <a href="teaching/fsci6222/fr/s05-probabilites-distributions.pdf" hreflang="fr">FR</a></td>
             <td class="hand">Review of sessions 1–4 <span class="pdf">(<a href="teaching/fsci6222/en/s05-revision-s1-s4.pdf">EN</a> · <a href="teaching/fsci6222/fr/s05-revision-s1-s4.pdf" hreflang="fr">FR</a>)</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s05/FSCI6222_S5_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s05/fsci6222-s05.zip" download>zip</a></td>
           </tr>
           <tr>
             <td class="num">6</td>
             <td>Correlation and Regression<div class="fr" lang="fr">Corrélation et régression</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s06-correlation-regression.pdf">EN</a> · <a href="teaching/fsci6222/fr/s06-correlation-regression.pdf" hreflang="fr">FR</a></td>
             <td class="hand">Advanced regression models <span class="pdf">(<a href="teaching/fsci6222/en/s06-regression-avancee.pdf">EN</a> · <a href="teaching/fsci6222/fr/s06-regression-avancee.pdf" hreflang="fr">FR</a>)</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s06/FSCI6222_S6_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s06/fsci6222-s06.zip" download>zip</a><br><span class="sub">Advanced: <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s06/Modeles_Avances_lineaire.ipynb">linear</a> · <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s06/Modeles_Avances_non_lineaire.ipynb">non-linear</a></span></td>
           </tr>
           <tr>
             <td class="num">7</td>
             <td>PCA and t-SNE<div class="fr" lang="fr">ACP et t-SNE</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s07-pca-tsne.pdf">EN</a> · <a href="teaching/fsci6222/fr/s07-pca-tsne.pdf" hreflang="fr">FR</a></td>
             <td class="hand">PCA: the mathematics <span class="pdf">(<a href="teaching/fsci6222/en/s07-pca-mathematique.pdf">EN</a> · <a href="teaching/fsci6222/fr/s07-pca-mathematique.pdf" hreflang="fr">FR</a>)</span><br>PCA: applications <span class="pdf">(<a href="teaching/fsci6222/en/s07-pca-applications.pdf">EN</a> · <a href="teaching/fsci6222/fr/s07-pca-applications.pdf" hreflang="fr">FR</a>)</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s07/FSCI6222_S7_PCA_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s07/fsci6222-s07.zip" download>zip</a></td>
           </tr>
           <tr>
             <td class="num">8</td>
             <td>Introduction to Machine Learning<div class="fr" lang="fr">Introduction à l'apprentissage automatique</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s08-intro-machine-learning.pdf">EN</a> · <a href="teaching/fsci6222/fr/s08-intro-machine-learning.pdf" hreflang="fr">FR</a></td>
             <td class="hand"><span class="muted">—</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s08/FSCI6222_S8_ML_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s08/fsci6222-s08.zip" download>zip</a><br><span class="sub">Exercise: <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s08/FSCI6222_S8_Exercice_Corrige.ipynb">solution</a></span></td>
           </tr>
           <tr>
             <td class="num">9</td>
             <td>Introduction to Deep Learning<div class="fr" lang="fr">Introduction à l'apprentissage profond</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s09-intro-deep-learning.pdf">EN</a> · <a href="teaching/fsci6222/fr/s09-intro-deep-learning.pdf" hreflang="fr">FR</a></td>
             <td class="hand">XOR and non-linearity <span class="pdf">(<a href="teaching/fsci6222/en/s09-xor-non-linearite.pdf">EN</a> · <a href="teaching/fsci6222/fr/s09-xor-non-linearite.pdf" hreflang="fr">FR</a>)</span></td>
+            <td class="nb"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s09/FSCI6222_S9_DL_Notebook.ipynb">Colab</a> · <a href="teaching/fsci6222/materials/s09/fsci6222-s09.zip" download>zip</a><br><span class="sub"><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/s09/FSCI6222_S9_DL_Demo.ipynb">Demo</a></span></td>
           </tr>
           <tr>
             <td class="num">10</td>
             <td>The Complete ML Pipeline<div class="fr" lang="fr">Pipeline ML complet</div></td>
             <td class="pdf"><a href="teaching/fsci6222/en/s10-pipeline-ml.pdf">EN</a> · <a href="teaching/fsci6222/fr/s10-pipeline-ml.pdf" hreflang="fr">FR</a></td>
             <td class="hand">Final review <span class="pdf">(<a href="teaching/fsci6222/en/s10-revision.pdf">EN</a> · <a href="teaching/fsci6222/fr/s10-revision.pdf" hreflang="fr">FR</a>)</span></td>
+            <td class="nb"><span class="muted">—</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <h4>Labs and exams</h4>
+        <table class="sessions labs">
+          <thead><tr><th>Assessment</th><th>Statement</th><th>Solution</th><th>Files</th></tr></thead>
+          <tbody>
+          <tr>
+            <td>Lab 1 (TP1) — Python, NumPy, pandas, cleaning and visualization<div class="fr" lang="fr">Travail pratique 1</div></td>
+            <td><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/tp1/FSCI6222_TP1_Partie1.ipynb">Part 1</a> · <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/tp1/FSCI6222_TP1_Partie2.ipynb">Part 2</a></td>
+            <td><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/tp1/FSCI6222_TP1_Partie1_Corrige.ipynb">Part 1</a> · <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/tp1/FSCI6222_TP1_Partie2_Corrige.ipynb">Part 2</a></td>
+            <td><a href="teaching/fsci6222/materials/tp1/fsci6222-tp1.zip" download>zip</a></td>
+          </tr>
+          <tr>
+            <td>Lab 2 (TP2) — predictive analysis of diabetes<div class="fr" lang="fr">Travail pratique 2 : analyse prédictive du diabète</div></td>
+            <td><a href="teaching/fsci6222/materials/tp2/FSCI6222_TP2.pdf">PDF</a> · <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/tp2/FSCI6222_TP2.ipynb">Colab</a></td>
+            <td><a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/tp2/FSCI6222_TP2_Corrige.ipynb">Colab</a></td>
+            <td><a href="teaching/fsci6222/materials/tp2/fsci6222-tp2.zip" download>zip</a></td>
+          </tr>
+          <tr>
+            <td>Midterm exam<div class="fr" lang="fr">Examen mi-session</div></td>
+            <td><a href="teaching/fsci6222/materials/midterm/FSCI6222_Examen_mi-session.pdf">PDF</a> · <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/midterm/FSCI6222_Examen_mi-session.ipynb">Colab</a></td>
+            <td><span class="muted">on request</span></td>
+            <td><a href="teaching/fsci6222/materials/midterm/fsci6222-midterm.zip" download>zip</a></td>
+          </tr>
+          <tr>
+            <td>Final exam<div class="fr" lang="fr">Examen final</div></td>
+            <td><a href="teaching/fsci6222/materials/final/FSCI6222_Examen_final.pdf">PDF</a> · <a href="https://colab.research.google.com/github/Marzoug-Nabil/Nabil/blob/main/academic/teaching/fsci6222/materials/final/FSCI6222_Examen_final.ipynb">Colab</a></td>
+            <td><span class="muted">on request</span></td>
+            <td><a href="teaching/fsci6222/materials/final/fsci6222-final.zip" download>zip</a></td>
           </tr>
           </tbody>
         </table>
@@ -116,22 +174,34 @@
       <h2>Publications</h2>
         <h3>Journal articles</h3>
         <ol class="pubs" reversed>
-          <li><b>N. Marzoug</b>, M. A. Akhloufi. FCVGAN: A Novel Generative Framework Integrating Fuzzy C-Means Clustering with Conditional VAE-GAN for Polyp Segmentation. <i>Sensors</i>, 26(19):6095, 2026. <a href="https://doi.org/10.3390/s26196095">doi</a></li>
-          <li><b>N. Marzoug</b>, M. A. Akhloufi. Variational Autoencoders for Medical Image Segmentation: A Review. <i>Journal of Imaging</i>, 12(10):481, 2026. <a href="https://doi.org/10.3390/jimaging12100481">doi</a></li>
-          <li>K. Halab, <b>N. Marzoug</b>, O. El Meslouhi, Z. E. Abou Elassad, M. A. Akhloufi. QU-Net: Quantum-Enhanced U-Net for Self Supervised Embedding and Classification of Skin Cancer Images. <i>Big Data and Cognitive Computing</i>, 10(1):12, 2026. <a href="https://doi.org/10.3390/bdcc10010012">doi</a></li>
-          <li><b>N. Marzoug</b>, K. Halab, O. El Meslouhi, Z. E. Abou Elassad, M. A. Akhloufi. Quantum-Enhanced Dual-Backbone Architecture for Accurate Gastrointestinal Disease Detection Using Endoscopic Imaging. <i>BioMedInformatics</i>, 5(3):51, 2025. <a href="https://doi.org/10.3390/biomedinformatics5030051">doi</a></li>
+          <li><b>N. Marzoug</b>, M. A. Akhloufi. FCVGAN: A Novel Generative Framework Integrating Fuzzy C-Means Clustering with Conditional VAE-GAN for Polyp Segmentation. <i>Sensors</i>, 26(19):6095, 2026. <a href="https://doi.org/10.3390/s26196095">doi</a><div class="cite" data-bib="fcvgan"></div></li>
+          <li><b>N. Marzoug</b>, M. A. Akhloufi. Variational Autoencoders for Medical Image Segmentation: A Review. <i>Journal of Imaging</i>, 12(10):481, 2026. <a href="https://doi.org/10.3390/jimaging12100481">doi</a><div class="cite" data-bib="vaereview"></div></li>
+          <li>K. Halab, <b>N. Marzoug</b>, O. El Meslouhi, Z. E. Abou Elassad, M. A. Akhloufi. QU-Net: Quantum-Enhanced U-Net for Self Supervised Embedding and Classification of Skin Cancer Images. <i>Big Data and Cognitive Computing</i>, 10(1):12, 2026. <a href="https://doi.org/10.3390/bdcc10010012">doi</a><div class="cite" data-bib="qunet"></div></li>
+          <li><b>N. Marzoug</b>, K. Halab, O. El Meslouhi, Z. E. Abou Elassad, M. A. Akhloufi. Quantum-Enhanced Dual-Backbone Architecture for Accurate Gastrointestinal Disease Detection Using Endoscopic Imaging. <i>BioMedInformatics</i>, 5(3):51, 2025. <a href="https://doi.org/10.3390/biomedinformatics5030051">doi</a><div class="cite" data-bib="dualbackbone"></div></li>
         </ol>
         <h3>Conference papers</h3>
         <ol class="pubs" reversed>
-          <li><b>N. Marzoug</b>, M. A. Akhloufi. Hybrid Generative Architecture for Synthetic Data Augmentation in Fungi Segmentation. <i>IEA/AIE 2026</i>, Kuala Lumpur, Malaysia. Springer. <span class="muted">(accepted)</span></li>
-          <li>H. El Hadaf, <b>N. Marzoug</b>, A. Jraifi. Optimizing Spare Parts Inventory Management Using Genetic Algorithm. <i>ICOA 2024</i>, IEEE. <a href="https://www.researchgate.net/publication/386036129_Optimizing_Spare_Parts_Inventory_Management_Using_Genetic_Algorithm">link</a></li>
-          <li><b>N. Marzoug</b>, K. Halab, Y. Mamma, et al. LIDarknet: Experimenting the Power of Ensemble Learning in the Classification of Network Traffic. <i>8th IEEE CyberSciTech 2023</i>. <a href="https://easychair.org/publications/preprint/xCx5">preprint</a></li>
+          <li><b>N. Marzoug</b>, M. A. Akhloufi. Hybrid Generative Architecture for Synthetic Data Augmentation in Fungi Segmentation. <i>IEA/AIE 2026</i>, Kuala Lumpur, Malaysia. Springer. <span class="muted">(accepted)</span><div class="cite" data-bib="fungi"></div></li>
+          <li>H. El Hadaf, <b>N. Marzoug</b>, A. Jraifi. Optimizing Spare Parts Inventory Management Using Genetic Algorithm. <i>ICOA 2024</i>, IEEE. <a href="https://www.researchgate.net/publication/386036129_Optimizing_Spare_Parts_Inventory_Management_Using_Genetic_Algorithm">link</a><div class="cite" data-bib="icoa"></div></li>
+          <li><b>N. Marzoug</b>, K. Halab, Y. Mamma, et al. LIDarknet: Experimenting the Power of Ensemble Learning in the Classification of Network Traffic. <i>8th IEEE CyberSciTech 2023</i>. <a href="https://easychair.org/publications/preprint/xCx5">preprint</a> · <a href="https://github.com/Marzoug-Nabil/CIC-darknet2020">code</a><div class="cite" data-bib="lidarknet"></div></li>
         </ol>
     </section>
 
     <section id="other">
       <h2>Other material</h2>
-      <p class="muted">Talks, posters and other resources will be added here.</p>
+      <h3>Research code and resources</h3>
+      <ul class="plain">
+        <li><a href="https://github.com/Marzoug-Nabil/Generative-AI-in-health-care">Generative AI in health care</a> — paper collection and LaTeX source of a literature review on generative AI applications in healthcare.</li>
+        <li><a href="https://github.com/Marzoug-Nabil/CIC-darknet2020">CIC-Darknet2020</a> — code for the LIDarknet network-traffic classification paper (CyberSciTech 2023).</li>
+        <li><a href="https://github.com/Marzoug-Nabil/Quantum-Machine-Learning">Quantum machine learning</a> — notebooks comparing hybrid quantum and classical CNNs (ResNet, EfficientNet) for polyp image classification.</li>
+      </ul>
+      <h3>Tutorials</h3>
+      <ul class="plain">
+        <li><a href="https://medium.com/@nabilmarzoug49/mastering-decision-trees-for-classification-unleashing-their-full-potential-13c018cbbfb5">Mastering decision trees for classification</a> (2023) · <a href="https://github.com/Marzoug-Nabil/Mastering-Decision-Trees-Unleashing-Their-Full-Potential">code</a></li>
+        <li><a href="https://medium.com/@nabilmarzoug49/data-science-web-scraping-with-python-b4b1d7655242">Data science: web scraping with Python</a> (2023) · <a href="https://github.com/Marzoug-Nabil/web-scraping-with-pyhton">code</a></li>
+      </ul>
+      <h3>Thesis</h3>
+      <p>M.Sc. thesis in Computer Science (Artificial Intelligence), Université de Moncton — in progress. Research carried out at the PRIME Lab.</p>
     </section>
   </main>
 

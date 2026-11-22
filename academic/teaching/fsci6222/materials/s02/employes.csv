@@ -1,0 +1,16 @@
+id,nom,departement,salaire,experience_annees,ville,date_embauche,note_performance
+1,Tremblay,IT,65000,5,Moncton,2020-03-15,8.5
+2,Dupont,RH,52000,3,,2022-01-10,7.2
+3,Boucher,IT,72000,8,Moncton,2017-06-20,9.1
+4,Landry,Finance,58000,,Fredericton,2021-09-01,6.8
+5,Richard,IT,,10,Dieppe,2015-04-12,8.9
+6,Cormier,Marketing,48000,2,Moncton,2023-07-01,
+7,LeBlanc,Finance,61000,6,,2019-11-15,7.5
+8,Gallant,RH,,4,Moncton,2021-03-20,8.0
+9,Theriault,IT,78000,12,Dieppe,2013-08-10,9.3
+10,Doucet,Marketing,45000,1,Moncton,,6.5
+11,Arsenault,Finance,67000,,Fredericton,2018-05-22,8.2
+12,Melanson,IT,70000,7,Moncton,2018-01-15,
+13,Robichaud,RH,54000,5,Bathurst,2020-06-01,7.8
+14,Leger,Marketing,,3,Moncton,2022-09-10,7.0
+15,Savoie,Finance,63000,6,Dieppe,2019-02-28,8.4

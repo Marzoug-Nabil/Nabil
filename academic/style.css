@@ -65,3 +65,36 @@ h3 { font-size: 1.15rem; font-weight: 600; margin: 1.4rem 0 .4rem; }
   .sessions td.pdf::before { content: "Slides: "; color: var(--muted); }
   .sessions .hand:has(.muted) { display: none; }
 }
+
+/* notebooks, labs, citations, lists */
+h4 { font-size: 1.02rem; font-weight: 600; margin: 2rem 0 .3rem; }
+.sessions .nb { white-space: nowrap; font-size: .9rem; }
+.sessions .sub { color: var(--muted); font-size: .85rem; }
+.labs td:first-child { width: 42%; }
+.plain { padding-left: 1.1rem; }
+.plain li { margin-bottom: .45rem; }
+.cite { margin-top: .15rem; }
+.bibtex summary { display: inline; cursor: pointer; color: var(--link); font-size: .85rem; list-style: none; }
+.bibtex summary::-webkit-details-marker { display: none; }
+.bibtex summary::before { content: "▸ "; }
+.bibtex[open] summary::before { content: "▾ "; }
+.bibtex pre {
+  margin: .4rem 0 .2rem; padding: .7rem .8rem; background: var(--row); border: 1px solid var(--rule);
+  font: .78rem/1.45 ui-monospace, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-word;
+}
+.bib-copy {
+  display: none; margin-left: .6rem; font: .78rem/1 inherit; padding: .2rem .55rem; cursor: pointer;
+  background: transparent; color: var(--text); border: 1px solid var(--rule); border-radius: 3px;
+}
+.bibtex[open] .bib-copy { display: inline-block; }
+@media (max-width: 640px) {
+  .sessions .nb::before { content: "Notebook: "; color: var(--muted); }
+  .sessions .nb:has(> .muted:only-child) { display: none; }
+  .labs td:first-child { width: 100%; font-weight: 600; }
+  .labs td:nth-child(2)::before { content: "Statement: "; color: var(--muted); font-weight: 400; }
+  .labs td:nth-child(3)::before { content: "Solution: "; color: var(--muted); }
+  .labs td:nth-child(4)::before { content: "Files: "; color: var(--muted); }
+  .sessions .nb, .sessions .pdf { white-space: normal; }
+}
+.bibtex { position: relative; }
+.bibtex .bib-copy { position: absolute; right: .5rem; top: 2rem; margin: 0; background: var(--bg); }
