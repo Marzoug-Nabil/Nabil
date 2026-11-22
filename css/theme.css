@@ -374,9 +374,7 @@ body.cursor-hover .cursor-ring { width: 64px; height: 64px; background: rgba(255
 }
 .pub-cite .bibtex[open] .bib-copy { display: inline-block; }
 
-/* Projects page */
-.projects-more { text-align: center; margin-top: 2.5rem; }
-/* 8 menu links: tighten on mid-size screens */
+/* Many menu links: tighten on mid-size screens */
 @media (min-width: 769px) and (max-width: 1240px) { .nav-menu { gap: .85rem; } .nav-menu a { font-size: .88rem; } }
 @media (min-width: 769px) and (max-width: 960px) { .nav-brand h2 { font-size: 1.15rem; } .nav-menu { gap: .6rem; } .nav-menu a { font-size: .82rem; } }
 
